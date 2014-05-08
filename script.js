@@ -11,7 +11,7 @@ $(document).ready(function(){
 	    var shakepoint = 0;
 
 
-		//$("#xVal").html(x);
+		$("#xVal").html(x);
 		//$("#yVal").html(y);
 		//$("#zVal").html(z);
 		$("#sVal").html(shakepoint);
