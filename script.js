@@ -49,7 +49,7 @@ $(document).ready(function(){
 		newY = Math.max(0, newY);
 		newY = Math.min(maxY, newY);
 		//$("#ball").css("top", Math.round(newY));
-		shake(x);
+		//shake(x);
 		
 		
 	}
