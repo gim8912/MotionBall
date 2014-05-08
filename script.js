@@ -1,14 +1,30 @@
 $(document).ready(function(){
-	console.log("ready");	
-
+	console.log("ready");
+	
+	var flag = 1;
+	var shakepoint = 0;
+	var x = event.accelerationIncludingGravity.x;
+	var y = event.accelerationIncludingGravity.y;
+	var z = event.accelerationIncludingGravity.z;
+	
+	var shake = function(){
+		if(x > 2 && flag === -1){
+			flag = 1;
+			shakepoint++;
+			alert(shakepoint);
+		}
+		else if(x < -2 && flag === 1)
+		{
+			flag = -1;
+			shakepoint++;
+			alert(shakepoint);
+		}	
+	}
 
 	function handleMotionEvent(event) {
 
-	    var x = event.accelerationIncludingGravity.x;
-	    var y = event.accelerationIncludingGravity.y;
-	    var z = event.accelerationIncludingGravity.z;
-	    var flag = 1;
-	    var shakepoint = 0;
+
+
 
 
 		$("#xVal").html(x);
@@ -38,17 +54,8 @@ $(document).ready(function(){
 		newY = Math.max(0, newY);
 		newY = Math.min(maxY, newY);
 		
-		if(x > 2 && flag === -1){
-			flag = 1;
-			shakepoint++;
-			alert(shakepoint);
-		}
-		else if(x < -2 && flag === 1)
-		{
-			flag = -1;
-			shakepoint++;
-			alert(shakepoint);
-		}
+		
+
 
 		//$("#ball").css("top", Math.round(newY));
 		
