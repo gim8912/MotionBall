@@ -7,11 +7,11 @@ $(document).ready(function(){
 	
 	var shake = function(number1){
 		
-		if(x > 2){
+		if(number1 > 2){
 			shakepoint++;
 			flag = 1;
 		}
-		else if(x < -2)
+		else if(number2 < -2)
 		{
 			shakepoint++;
 			flag = -1;
@@ -50,7 +50,7 @@ $(document).ready(function(){
 		newY = Math.max(0, newY);
 		newY = Math.min(maxY, newY);
 		//$("#ball").css("top", Math.round(newY));
-		shake(x);
+		shake(Math.round(x));
 		
 		
 	}
