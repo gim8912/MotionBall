@@ -59,7 +59,8 @@ $(document).ready(function(){
 
 
 	window.addEventListener("devicemotion", handleMotionEvent, true);
-	shake();
+	setInterval(shake,10); 
+
 
 	//$("#ball").css("left", 30);
 	//$("#ball").css("top", 30);
