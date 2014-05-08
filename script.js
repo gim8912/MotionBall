@@ -29,21 +29,6 @@ $(document).ready(function(){
 		$("#xVal").html(Math.round(x));
 		$("#sVal").html(shakepoint);
 
-		var maxX = window.innerWidth - $("#ball").width();
-		var maxY = window.innerHeight - $("#ball").height();
-
-		orgX = parseFloat(orgX); // 스트링을 숫자로 변환
-		var newX = orgX + x;
-		newX = Math.max(0, newX);
-		newX = Math.min(maxX, newX);
-
-
-		var orgY = $("#ball").css("top");
-		orgY = parseFloat(orgY);
-		var newY = orgY - y;
-		newY = Math.max(0, newY);
-		newY = Math.min(maxY, newY);
-		
 	}
 	
 
