@@ -11,7 +11,7 @@ $(document).ready(function(){
 		}
 		if(temp_x < -4 && flag === 1)
 		{
-			if(flag===1)shakepoint++;
+			shakepoint++;
 			flag = -1;
 		}
 	}
@@ -24,10 +24,12 @@ $(document).ready(function(){
 		var y = event.accelerationIncludingGravity.y; // y값
 		var z = event.accelerationIncludingGravity.z; // z값
 		x = Math.round(x); // 1이하 소숫점 버림.
+		y = Math.round(x);
+		z = Math.round(x);
 
 		$("#xVal").html(x);
-		//$("#yVal").html(y);
-		//$("#zVal").html(z);
+		$("#yVal").html(y);
+		$("#zVal").html(z);
 		$("#sVal").html(shakepoint);
 
 		var maxX = window.innerWidth - $("#ball").width();
@@ -42,20 +44,16 @@ $(document).ready(function(){
 		var newX = orgX + x;
 		newX = Math.max(0, newX);
 		newX = Math.min(maxX, newX);
-
-
 		//$("#ball").css("left", Math.round(newX));
 
-		y = Math.round(y);
 		var orgY = $("#ball").css("top");
 		orgY = parseFloat(orgY);
 		var newY = orgY - y;
 		newY = Math.max(0, newY);
 		newY = Math.min(maxY, newY);
-			
-
-		shake();
 		//$("#ball").css("top", Math.round(newY));
+		
+		shake();
 		
 	}
 	
