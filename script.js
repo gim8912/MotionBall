@@ -31,7 +31,7 @@ $(document).ready(function(){
 
 		var newX = orgX + x;
 		newX = Math.max(0, newX);
-		newX = -1*Math.min(maxX, newX);
+		newX = Math.min(maxX, newX);
 
 
 		$("#ball").css("left", Math.round(newX));
@@ -46,7 +46,7 @@ $(document).ready(function(){
 
 		var newY = orgY - y;
 		newY = Math.max(0, newY);
-		newY = -1*Math.min(maxY, newY);
+		newY = Math.min(maxY, newY);
 
 
 		$("#ball").css("top", Math.round(newY));
