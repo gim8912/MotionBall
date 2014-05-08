@@ -7,8 +7,6 @@ $(document).ready(function(){
 	
 	var shake = function(){
 		
-		$("#1Val").html(flag);
-		
 		if(temp_x > 2){
 			shakepoint++;
 			flag = 1;
