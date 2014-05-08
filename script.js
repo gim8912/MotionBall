@@ -1,16 +1,17 @@
 $(document).ready(function(){
 	console.log("ready");
+	
 	var temp_x;
 	var flag = 1;
 	var shakepoint = 0;
 	
-	var shake = function(number1)){
+	var shake = function(number1){
 		
-		if(x > 2 && flag ==-1){
+		if(x > 2){
 			shakepoint++;
 			flag = 1;
 		}
-		else if(x < -2 && flag == 1)
+		else if(x < -2)
 		{
 			shakepoint++;
 			flag = -1;
