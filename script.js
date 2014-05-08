@@ -4,18 +4,7 @@ $(document).ready(function(){
 	var flag = 1;
 	var shakepoint = 0;
 	
-	var shake = funtion(Number(number1)){
-		
-		if(temp_x > 4 && flag===-1){
-			shakepoint++;
-			flag = 1;
-		}
-		else if(temp_x < -4 && flag === 1)
-		{
-			shakepoint++;
-			flag = -1;
-		}
-	}
+
 	
 	function handleMotionEvent(event) {
 		
@@ -25,12 +14,8 @@ $(document).ready(function(){
 		var y = event.accelerationIncludingGravity.y; // y값
 		var z = event.accelerationIncludingGravity.z; // z값
 		x = Math.round(x); // 1이하 소숫점 버림.
-		y = Math.round(x);
-		z = Math.round(x);
 
-		$("#xVal").html(x);
-		$("#yVal").html(y);
-		$("#zVal").html(z);
+		$("#xVal").html(Math.round(x));
 		$("#sVal").html(shakepoint);
 
 		var maxX = window.innerWidth - $("#ball").width();
@@ -54,7 +39,6 @@ $(document).ready(function(){
 		newY = Math.min(maxY, newY);
 		//$("#ball").css("top", Math.round(newY));
 		
-		shake(x);
 		
 	}
 	
