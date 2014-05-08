@@ -14,7 +14,7 @@ $(document).ready(function(){
 		//$("#xVal").html(x);
 		//$("#yVal").html(y);
 		//$("#zVal").html(z);
-		$("#zVal").html(shakepoint);
+		$("#sVal").html(shakepoint);
 
 		var maxX = window.innerWidth - $("#ball").width();
 		var maxY = window.innerHeight - $("#ball").height();
