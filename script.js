@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	console.log("ready");
 	
-	var temp_x;
+	var temp_x = 0;
 	var flag = 1;
 	var shakepoint = 0;
 	
@@ -53,7 +53,7 @@ $(document).ready(function(){
 		newY = Math.max(0, newY);
 		newY = Math.min(maxY, newY);
 		//$("#ball").css("top", Math.round(newY));
-		shake();
+		//shake();
 		
 		
 	}
