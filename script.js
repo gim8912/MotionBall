@@ -38,11 +38,11 @@ $(document).ready(function(){
 		newY = Math.max(0, newY);
 		newY = Math.min(maxY, newY);
 		
-		if(x > 6 && flag === -1){
+		if(x > 2 && flag === -1){
 			flag = 1;
 			shakepoint++;
 		}
-		else if(x < -6 && flag === 1)
+		else if(x < -2 && flag === 1)
 		{
 			flag = -1;
 			shakepoint++;
