@@ -29,7 +29,7 @@ $(document).ready(function(){
 		temp_x = x;
 		
 		$("#xVal").html(Math.round(x));
-		$("#sVal").html(temp_x);
+		$("#sVal").html(shakepoint);
 
 		var maxX = window.innerWidth - $("#ball").width();
 		var maxY = window.innerHeight - $("#ball").height();
