@@ -51,7 +51,7 @@ $(document).ready(function(){
 		newY = Math.max(0, newY);
 		newY = Math.min(maxY, newY);
 		//$("#ball").css("top", Math.round(newY));
-		shake();
+		
 		
 		
 	}
@@ -59,7 +59,7 @@ $(document).ready(function(){
 
 
 	window.addEventListener("devicemotion", handleMotionEvent, true);
-
+	shake();
 
 	//$("#ball").css("left", 30);
 	//$("#ball").css("top", 30);
