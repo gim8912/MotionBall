@@ -59,7 +59,7 @@ $(document).ready(function(){
 
 
 	window.addEventListener("devicemotion", handleMotionEvent, true);
-	setInterval(shake,10); 
+	setInterval(shake,100); 
 
 
 	//$("#ball").css("left", 30);
