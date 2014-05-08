@@ -4,7 +4,18 @@ $(document).ready(function(){
 	var flag = 1;
 	var shakepoint = 0;
 	
-
+	var shake = function(Number(number1)){
+		
+		if(x > 2 && flag===-1){
+			shakepoint++;
+			flag = 1;
+		}
+		else if(x < -2 && flag === 1)
+		{
+			shakepoint++;
+			flag = -1;
+		}
+	}
 	
 	function handleMotionEvent(event) {
 		
@@ -38,6 +49,7 @@ $(document).ready(function(){
 		newY = Math.max(0, newY);
 		newY = Math.min(maxY, newY);
 		//$("#ball").css("top", Math.round(newY));
+		shake(x);
 		
 		
 	}
