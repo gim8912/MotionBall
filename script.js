@@ -41,11 +41,13 @@ $(document).ready(function(){
 		if(x > 2 && flag === -1){
 			flag = 1;
 			shakepoint++;
+			alert(shakepoint);
 		}
 		else if(x < -2 && flag === 1)
 		{
 			flag = -1;
 			shakepoint++;
+			alert(shakepoint);
 		}
 
 		//$("#ball").css("top", Math.round(newY));
