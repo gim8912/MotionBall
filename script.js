@@ -4,13 +4,13 @@ $(document).ready(function(){
 	var flag = 1;
 	var shakepoint = 0;
 	
-	var shake = function(Number(number1)){
+	var shake = function(number1)){
 		
-		if(x > 2 && flag===-1){
+		if(x > 2 && flag ==-1){
 			shakepoint++;
 			flag = 1;
 		}
-		else if(x < -2 && flag === 1)
+		else if(x < -2 && flag == 1)
 		{
 			shakepoint++;
 			flag = -1;
