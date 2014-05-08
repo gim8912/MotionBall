@@ -7,11 +7,11 @@ $(document).ready(function(){
 	
 	var shake = function(){
 		
-		if(temp_x > 2){
+		if(temp_x > 2 && flag === -1){
 			shakepoint++;
 			flag = 1;
 		}
-		else if(temp_x < -2)
+		else if(temp_x < -2 && flag === 1)
 		{
 			shakepoint++;
 			flag = -1;
