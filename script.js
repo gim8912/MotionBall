@@ -1,26 +1,9 @@
 $(document).ready(function(){
 	console.log("ready");
 	
-
-
-	
-
-
 	function handleMotionEvent(event) {
 		
-		var shake = function(){
-			if(x > 2 && flag === -1){
-				flag = 1;
-				shakepoint++;
-				alert(shakepoint);
-			}
-			else if(x < -2 && flag === 1)
-			{
-				flag = -1;
-				shakepoint++;
-				alert(shakepoint);
-			}	
-		}
+	
 		var flag = 1;
 		var shakepoint = 0;
 		var x = event.accelerationIncludingGravity.x;
@@ -55,7 +38,16 @@ $(document).ready(function(){
 		newY = Math.max(0, newY);
 		newY = Math.min(maxY, newY);
 		
-		setInterval(shake, 50);
+		if(x > 4){
+			if(flag===-1)shakepoint++;
+			flag = 1;
+		
+		}
+		if(x < -4)
+		{
+			if(flag===1)shakepoint++;
+			flag = -1;
+		}
 
 
 		//$("#ball").css("top", Math.round(newY));
