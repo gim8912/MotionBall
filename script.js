@@ -19,8 +19,6 @@ $(document).ready(function(){
 	}
 	
 	function handleMotionEvent(event) {
-		
-	
 
 		var x = event.accelerationIncludingGravity.x; // 스마트폰 센서 값 받아오는 명령어 x값
 		var y = event.accelerationIncludingGravity.y; // y값
@@ -33,34 +31,23 @@ $(document).ready(function(){
 
 		var maxX = window.innerWidth - $("#ball").width();
 		var maxY = window.innerHeight - $("#ball").height();
-		var factor = 3;
-	
-		
-		
-		//var orgX = $("#ball").css("left"); 
-		
+
 		orgX = parseFloat(orgX); // 스트링을 숫자로 변환
 		var newX = orgX + x;
 		newX = Math.max(0, newX);
 		newX = Math.min(maxX, newX);
-		//$("#ball").css("left", Math.round(newX));
+
 
 		var orgY = $("#ball").css("top");
 		orgY = parseFloat(orgY);
 		var newY = orgY - y;
 		newY = Math.max(0, newY);
 		newY = Math.min(maxY, newY);
-		//$("#ball").css("top", Math.round(newY));
-		
-		
 		
 	}
 	
 
-
 	window.addEventListener("devicemotion", handleMotionEvent, true);
 	setInterval(shake,100); // 계속 이 함수가 돌아가게 만들기 위해 선언함. 0.1초마다 이 함수가 실행됨(1000 = 1초)
 
-	//$("#ball").css("left", 30);
-	//$("#ball").css("top", 30);
 });
