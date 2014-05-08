@@ -4,12 +4,13 @@ $(document).ready(function(){
 	var flag = 1;
 	var shakepoint = 0;
 	
-	var shake = funtion(){
+	var shake = funtion(Number(number1)){
+		
 		if(temp_x > 4 && flag===-1){
 			shakepoint++;
 			flag = 1;
 		}
-		if(temp_x < -4 && flag === 1)
+		else if(temp_x < -4 && flag === 1)
 		{
 			shakepoint++;
 			flag = -1;
@@ -53,7 +54,7 @@ $(document).ready(function(){
 		newY = Math.min(maxY, newY);
 		//$("#ball").css("top", Math.round(newY));
 		
-		shake();
+		shake(x);
 		
 	}
 	
