@@ -5,13 +5,15 @@ $(document).ready(function(){
 	var flag = 1;
 	var shakepoint = 0;
 	
-	var shake = function(number1){
+	var shake = function(){
 		
-		if(number1 > 2){
+		$("#1Val").html(flag);
+		
+		if(temp_x; > 2){
 			shakepoint++;
 			flag = 1;
 		}
-		else if(number2 < -2)
+		else if(temp_x < -2)
 		{
 			shakepoint++;
 			flag = -1;
@@ -26,7 +28,8 @@ $(document).ready(function(){
 		var y = event.accelerationIncludingGravity.y; // y값
 		var z = event.accelerationIncludingGravity.z; // z값
 		x = Math.round(x); // 1이하 소숫점 버림.
-
+		temp_x = x;
+		
 		$("#xVal").html(Math.round(x));
 		$("#sVal").html(shakepoint);
 
@@ -35,7 +38,7 @@ $(document).ready(function(){
 		var factor = 3;
 	
 		
-		temp_x = x;
+		
 		//var orgX = $("#ball").css("left"); 
 		
 		orgX = parseFloat(orgX); // 스트링을 숫자로 변환
@@ -50,7 +53,7 @@ $(document).ready(function(){
 		newY = Math.max(0, newY);
 		newY = Math.min(maxY, newY);
 		//$("#ball").css("top", Math.round(newY));
-		shake(Math.round(x));
+		shake();
 		
 		
 	}
