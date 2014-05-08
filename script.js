@@ -1,8 +1,7 @@
 $(document).ready(function(){
 	console.log("ready");
 	
-	var flag = 1;
-	var shakepoint = 0;
+
 
 	
 
@@ -22,7 +21,8 @@ $(document).ready(function(){
 				alert(shakepoint);
 			}	
 		}
-
+		var flag = 1;
+		var shakepoint = 0;
 		var x = event.accelerationIncludingGravity.x;
 		var y = event.accelerationIncludingGravity.y;
 		var z = event.accelerationIncludingGravity.z;
